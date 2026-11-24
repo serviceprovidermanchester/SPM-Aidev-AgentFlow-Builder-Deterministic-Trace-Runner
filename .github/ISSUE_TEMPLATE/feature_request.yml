@@ -1,0 +1,29 @@
+name: Feature Request
+description: Propose a new feature, tool integration, or architectural enhancement
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make **AgentFlow** even more powerful? We welcome proposals and feedback!
+  - type: input
+    id: title
+    attributes:
+      label: Proposed Feature Title
+      placeholder: "e.g. Add webhook trigger endpoint for external workflows"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description & Use Case
+      description: What problem does this solve? What user role benefits?
+    validations:
+      required: true
+  - type: textarea
+    id: tool_contract
+    attributes:
+      label: Proposed Tool Contract / Seam (if applicable)
+      description: If proposing a new tool, define the input/output contract and deterministic cost/duration model.
+    validations:
+      required: false

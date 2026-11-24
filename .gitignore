@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & local configuration
+.env
+.env.local
+.env.*.local
+
+# SQLite Database Files
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.db
+backend/data/*.sqlite
+backend/data/*.sqlite-journal
+
+# Temporary test directories & outputs
+/tmp/
+agentflow-test-*/
+.temp/
+
+# Logs & Debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor configs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Coverage & Test reports
+coverage/
+.nyc_output/

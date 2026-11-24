@@ -1,0 +1,18 @@
+{
+  "name": "spm-aidev-agentflow-backend",
+  "version": "1.0.0",
+  "description": "AgentFlow backend, built by SPManchester Private Limited. Zero runtime dependencies: node:http, node:sqlite, node:crypto. Serves JSON REST API and static web console.",
+  "main": "src/server.js",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/db.js && node --check src/seed.js && node --check src/seed-data.js && node --check src/ai/engine.js"
+  },
+  "author": "Sayed Mudassar Akbar / SPManchester Private Limited <info@spmanchester.com> (https://spmanchester.com)",
+  "license": "MIT"
+}

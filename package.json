@@ -1,0 +1,42 @@
+{
+  "name": "spm-aidev-agentflow",
+  "version": "1.0.0",
+  "description": "AgentFlow — Enterprise-grade agent workflow builder and deterministic trace runner with guardrails and human-in-the-loop approval. Built by SPManchester Private Limited.",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "seed": "node backend/src/seed.js",
+    "test": "node tests/run-tests.js",
+    "check": "node --check backend/src/server.js && node --check backend/src/app.js && node --check backend/src/db.js && node --check backend/src/seed.js && node --check backend/src/seed-data.js && node --check backend/src/ai/engine.js && node --check backend/src/middleware/auth.js && node --check backend/src/middleware/errors.js && node --check backend/src/middleware/validate.js && node --check backend/src/routes/auth.js && node --check backend/src/routes/misc.js && node --check backend/src/routes/workflows.js && node --check backend/src/utils/respond.js && node --check backend/src/utils/tokens.js && node --check web/app.js && node --check tests/run-tests.js"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-workflows",
+    "trace-runner",
+    "llmops",
+    "guardrails",
+    "deterministic-ai",
+    "human-in-the-loop",
+    "approval-workflow",
+    "spmanchester",
+    "nodejs",
+    "sqlite"
+  ],
+  "author": "Sayed Mudassar Akbar / SPManchester Private Limited <info@spmanchester.com> (https://spmanchester.com)",
+  "contributors": [
+    "Sayed Mudassar Akbar <info@spmanchester.com>",
+    "SPManchester Engineering Team <info@spmanchester.com>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serviceprovidermanchester/spm-aidev-agentflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serviceprovidermanchester/spm-aidev-agentflow/issues"
+  },
+  "homepage": "https://www.spmanchester.com"
+}

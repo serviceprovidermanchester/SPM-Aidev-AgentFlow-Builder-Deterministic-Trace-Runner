@@ -1,0 +1,31 @@
+# Docker Compose specification for AgentFlow
+# Maintained by SPManchester Private Limited (https://spmanchester.com)
+version: '3.8'
+
+services:
+  agentflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spmanchester/agentflow:latest
+    container_name: spm-agentflow
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      - DB_PATH=/app/backend/data/agentflow.sqlite
+    volumes:
+      - agentflow-data:/app/backend/data
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:4000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  agentflow-data:
+    driver: local

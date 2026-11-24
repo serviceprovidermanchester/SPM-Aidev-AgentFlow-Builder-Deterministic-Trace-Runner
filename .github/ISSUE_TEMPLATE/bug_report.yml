@@ -1,0 +1,42 @@
+name: Bug Report
+description: Create a report to help us improve AgentFlow
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue in **AgentFlow**, built by **SPManchester Private Limited**!
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A concise summary of what went wrong.
+      placeholder: "e.g. Budget cap guardrail does not halt on exact threshold match"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps or workflow configuration to reproduce the issue.
+      placeholder: |
+        1. Create workflow with tool 'date_add'
+        2. Set input to '2026-02-30'
+        3. Observe error output
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment Info
+      description: Node version, OS, browser (if console bug).
+      placeholder: "Node v22.5.0 on Ubuntu 24.04 / Chrome 124"
+    validations:
+      required: true

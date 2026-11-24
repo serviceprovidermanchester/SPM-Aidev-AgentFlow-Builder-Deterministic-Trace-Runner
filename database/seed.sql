@@ -1,0 +1,15 @@
+-- AgentFlow — seed summary (the executable seed lives in backend/src/seed.js
+-- and backend/src/seed-data.js, run idempotently on first server start).
+-- Showcase team: ConnectNorth Support Operations, Northern Quarter,
+-- Manchester (fictional). Owner: owner@connectnorth.co.uk ·
+-- Staff: team@connectnorth.co.uk
+-- Knowledge: 8 entries (router_replacement=45, engineer_visit=60,
+-- broadband_monthly=35, sla_hours=4, support_phone, office_address,
+-- refund_window_days=14, team_name).
+-- Workflows: Install Quote Builder (canonical: lookup 45 -> calculator
+-- "45 * 2" = 90 -> template "Total for 2 replacement routers: £90.",
+-- cost 20), Response Time Promise (cost 10), Refund Deadline Checker
+-- (2026-03-01 + 14 days, cost 13), Escalation Summary with Approval
+-- (pauses at its approval step after 1 step, cost 6).
+-- Seeded runs are produced by the real engine, so every trace reconciles:
+-- 4 runs, 3 completed / 1 awaiting approval, total spend 49 credits.
